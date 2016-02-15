@@ -2,6 +2,8 @@
 
 We want to use [JS Hint](http://jshint.com/) to detect errors and potential problems (to make our code run properly), and [JSCS](http://jscs.info/) to enforce a style guide (to make our code more readable).
 
+![](code-checker.jpg)
+
 We also want these two things to happen automagically, and run whenever we update our code. The checker will tell us which line number of our code it found the problem, and what it thinks the problem is.
 
 ## Option 1: Easy - install for each project
