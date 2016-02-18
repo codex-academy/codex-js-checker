@@ -4,7 +4,7 @@ layout: default
 
 # Option 1: Beginner - install for each project
 
-Copy the `package.json` to your project.
+Copy the `package.json` [from the repo](https://github.com/codex-academy/codex-js-checker/blob/gh-pages/package.json) to your project.
 
 Run `npm install`.
 
