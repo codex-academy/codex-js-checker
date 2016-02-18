@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Option 3: Advanced - install globally, watch all files
 
 Add the packages we need to your global npm like this:  `npm install -g jshint jscs chokidar`. Chokidar is a tiny app that watches files for changes.

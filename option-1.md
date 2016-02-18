@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Option 1: Beginner - install for each project
 
 Copy the `package.json` to your project.

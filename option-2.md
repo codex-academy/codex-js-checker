@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Option 2: Intermediate - install globally, run for each file
 
 Add the packages we need to your global npm like this:

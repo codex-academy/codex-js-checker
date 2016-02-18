@@ -1,0 +1,15 @@
+{
+  "name": "codex-js-checker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "check": "chokidar '*.js' -c 'jshint *.js && jscs --preset=grunt *.js'"
+  },
+  "author": "Steve Barnett",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar": "^1.4.2",
+    "jscs": "^2.9.0",
+    "jshint": "^2.9.1"
+  }
+}
