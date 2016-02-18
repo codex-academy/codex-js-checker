@@ -2,28 +2,16 @@
 layout: default
 ---
 
-# Option 2: Intermediate - install globally, run for each file
+# Option 2: install globally, watch all files
 
-Add the packages we need to your global npm like this:
+Add the packages we need to your global npm like this:  `npm install -g jshint jscs chokidar`. Chokidar is a tiny app that watches files for changes.
 
-```
-npm install -g jshint jscs chokidar
-```
-
-You can check for errors in a file called `index.js` by running:
+To have all your JavaScript files watched for changes and checked for errors and readability, run:
 
 ```
-jshint index.js
+chokidar '*.js' -c 'jshint *.js && jscs --preset=grunt *.js'
 ```
 
-You can check for readability and style in a file called `app.js` by running:
+To stop the checker, hit `Ctrl + C`.
 
-```
-jscs --preset=grunt app.js
-```
-
-You can check for errors **and** readability and style in a file called `fish.js` by running:
-
-```
-jshint fish.js && jscs --preset=grunt fish.js
-```
+We're using the `grunt` preset for jscs because it matches a lot of the things we care about. Have a look at [the other JSCS presets](http://jscs.info/overview#presets) for more info.
