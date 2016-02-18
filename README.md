@@ -4,7 +4,7 @@ We want to use [JS Hint](http://jshint.com/) to detect errors and potential prob
 
 ![](code-checker.jpg)
 
-We also want these two things to happen automagically, and run whenever we update our code. The checker will tell us which line number of our code it found the problem, and what it thinks the problem is.
+We would also like these two things to happen automagically, and run whenever we save our code. The checker will tell us which line number of our code it found the problem, and what it thinks the problem is. We can do this, and see the results on the command line.
 
 ## Option 1: Easy - install for each project
 
@@ -18,13 +18,40 @@ Now run
 npm run check
 ```
 
-to have your JavaScript files watched for changes and checked for errors and readability. To stop the checker, hit `Ctrl + C`.
+to (run the "check" script and) have your JavaScript files watched for changes and checked for errors and readability. To stop the checker, hit `Ctrl + C`.
 
-## Option 2: Advanced - install globally
+## Option 2: Medium - install globally, run for each file
 
-Add the pacakges we need to your global npm like this:  `npm install -g jshint jscs chokidar`.
+Add the packages we need to your global npm like this:
 
-To have your JavaScript files watched  for changes and checked for errors and readability, run:
+```
+npm install -g jshint jscs chokidar
+```
+
+You can check for errors in a file called `index.js` by running:
+
+```
+jshint index.js
+```
+
+You can check for readability and style in a file called `app.js` by running:
+
+```
+jscs --preset=grunt app.js
+```
+
+You can check for errors **and** readability and style in a file called `fish.js` by running:
+
+```
+jshint fish.js && jscs --preset=grunt fish.js
+```
+
+
+## Option 3: Advanced - install globally, watch all files
+
+Add the packages we need to your global npm like this:  `npm install -g jshint jscs chokidar`. Chokidar is a tiny app that watches files for changes.
+
+To have all your JavaScript files watched for changes and checked for errors and readability, run:
 
 ```
 chokidar '*.js' -c 'jshint *.js && jscs --preset=grunt *.js'
