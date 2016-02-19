@@ -10,6 +10,8 @@ Add the packages we need to your global npm like this:
 npm install -g jshint jscs
 ```
 
+The `-g` means global, so you can run this command from anywhere.
+
 ## JS Hint
 
 You can check for errors in a file called `index.js` by running:
