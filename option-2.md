@@ -15,3 +15,7 @@ chokidar '*.js' -c 'jshint *.js && jscs --preset=grunt *.js'
 To stop the checker, hit `Ctrl + C`.
 
 We're using the `grunt` preset for jscs because it matches a lot of the things we care about. Have a look at [the other JSCS presets](http://jscs.info/overview#presets) for more info.
+
+## Automatically fix things
+
+If you run the command with the `--fix` option, JSCS with automatically fix your code for you. Wow!
