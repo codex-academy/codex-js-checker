@@ -28,6 +28,10 @@ You can check for readability and style in a file called `app.js` by running:
 jscs --preset=grunt app.js
 ```
 
+### Automatically fix things
+
+If you run the command with the `--fix` option, JSCS with automatically fix your code for you. Wow!
+
 ## Combined!
 
 You can check for errors **and** readability and style in a file called `fish.js` by running:
